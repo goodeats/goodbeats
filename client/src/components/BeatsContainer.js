@@ -1,10 +1,39 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class BeatsContainer extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      beats: []
+    }
+  }
+
+  componentDidMount(){
+    axios.get('api/v1/beats.json')
+      .then(response => {
+        console.log("😎" + response.data);
+        this.setState({
+          beats: response.data
+        })
+      })
+      .catch(error => console.log("😭" + error) + "😭")
+  }
+
   render() {
     return (
       <div className="Beats-container">
-        Beats
+        <p>Beats</p>
+        <ul className="Beats-list">
+          {this.state.beats.map(beat => {
+            return (
+              <li className="Beats-list-item">
+                <h4>{beat.title}</h4>
+                <p>{beat.description}</p>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }
