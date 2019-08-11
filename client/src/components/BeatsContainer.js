@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import BeatListItem from './BeatListItem';
 
 class BeatsContainer extends Component {
   constructor(props){
@@ -27,10 +28,10 @@ class BeatsContainer extends Component {
         <ul className="Beats-list">
           {this.state.beats.map(beat => {
             return (
-              <li className="Beats-list-item">
-                <h4>{beat.title}</h4>
-                <p>{beat.description}</p>
-              </li>
+              <BeatListItem
+                key={beat.id}
+                beat={beat}
+              />
             )
           })}
         </ul>
