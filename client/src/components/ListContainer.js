@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ListItem from './ListItem';
+import NewListForm from './NewListForm';
 
 class ListContainer extends Component {
   constructor(props){
@@ -26,6 +27,7 @@ class ListContainer extends Component {
     return (
       <div className="ListContainer">
         <h1 className="ListContainer-header">Beats</h1>
+        <NewListForm onNewList={this.addNewList} />
         <ul className="List">
           {this.state.list.map(listItem => {
             return (

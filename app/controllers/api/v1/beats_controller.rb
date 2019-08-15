@@ -19,7 +19,7 @@ module Api::V1
       @beat = Beat.new(beat_params)
 
       if @beat.save
-        render json: @beat, status: :created, location: @beat
+        render json: @beat, status: :created
       else
         render json: @beat.errors, status: :unprocessable_entity
       end
