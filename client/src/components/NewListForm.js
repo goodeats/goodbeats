@@ -2,11 +2,11 @@ import React from 'react';
 
 const NewListForm = ({ onNewList = f => f}) => {
 
-  let title, newList;
+  let title, description;
 
   const submit = e => {
     e.preventDefault();
-    onNewList(_title.value, _description.value)
+    onNewList(title.value, description.value)
     title.value = ''
     title.description = ''
     title.focus()
