@@ -1,0 +1,30 @@
+Brainstorm from notes on 6/23/19
+goodbeats
+press button, make sound
+control pitch, length
+set notes to pitch values
+play multiple notes
+play chords
+add an effect
+play multiple instruments
+
+(next page)
+mute
+focus
+group actions
+effects
+duration (?)
+loop length
+bpm
+save, auto save
+immutable history
+invite others
+  - role access
+publish
+export
+import
+  - import & edit options
+save combos of
+  - effects
+  - instrument pairing
+use search by typing to add next instrument & other hot keys
