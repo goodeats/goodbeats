@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BeatsContainer from './components/BeatsContainer';
+import ListContainer from './components/ListContainer';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <p><span role="img" aria-label="rock hand sign">🤘</span></p>
       </header>
-      <BeatsContainer />
+      <ListContainer />
     </div>
   );
 }
